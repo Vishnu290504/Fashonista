@@ -33,6 +33,7 @@ function LoginForm() {
   };
 
   return (
+    <div className="l">
     <div className="login-form-container">
       <div className="login">
         <div className="loginform">
@@ -76,6 +77,7 @@ function LoginForm() {
           {loginForm ? "Signup" : "Already have an account? Login here"}
         </p>
       </div>
+    </div>
     </div>
   );
 };
