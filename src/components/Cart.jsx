@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ItemContext, imageMap } from '../context/ItemContext';
 import { FaShoppingCart } from "react-icons/fa";
 import './Cart.css';
@@ -15,12 +15,25 @@ const Cart = () => {
     phone: ''
   });
 
+  useEffect(() => {
+    const initialQuantities = itemsInCart.reduce((acc, item) => {
+      const key = `${item._id}-${item.size}`;
+      acc[key] = 1;
+      return acc;
+    }, {});
+    setQuantities(initialQuantities);
+  }, [itemsInCart]);
+
   const updateQuantity = (item, value) => {
     const key = `${item._id}-${item.size}`;
-    setQuantities(prevQuantities => ({
-      ...prevQuantities,
-      [key]: (prevQuantities[key] || 1) + value
-    }));
+    setQuantities(prevQuantities => {
+      const newQuantity = (prevQuantities[key] || 1) + value;
+      if (newQuantity < 1) return prevQuantities;
+      return {
+        ...prevQuantities,
+        [key]: newQuantity
+      };
+    });
   };
 
   const calculateTotalItems = () => {
@@ -152,4 +165,3 @@ const Cart = () => {
 };
 
 export default Cart;
-
