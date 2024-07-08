@@ -1,9 +1,9 @@
 .mycart-container {
   padding: 20px;
   text-align: center;
+  margin-top: 20px;
 }
 .mycart-items {
-  margin-top: 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
