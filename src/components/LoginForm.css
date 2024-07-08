@@ -1,27 +1,25 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, #8cf2ff, #d3bfff);
+  background: linear-gradient(115deg, #40b3c7, #ffd6ed);
 }
-  
+.l{
+  padding:2rem;
+  background-color: rgb(230, 232, 233);
+  margin:auto;
+  margin-top:10rem;
+  margin-bottom:12rem;
+  max-width: 800px;
+}
   .login-form-container {
-    margin-top: 100px;
-    display: flex;
-    background-color: aquamarine;
-    border: 25px solid white;
-    align-items: center;
-    flex-wrap: wrap; 
-    height: 500px;
-    justify-content: center; 
+    display:flex;
+  background-color: aquamarine;
   }
   
   .login {
     padding: 1rem;
     background-color: #1f1f38;
     text-align: center; 
-    flex: 1; 
-    margin: 0.5rem;
-    margin-left: 100px;
   }
   
   .loginform {
@@ -47,10 +45,10 @@ html, body {
   
   input[type='text'],input[type='email'],
   input[type='password'] {
-    width: 400px; 
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width:320px;
+  padding:0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   }
   
   .loginform button {
@@ -62,7 +60,6 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-    display: block; 
   }
   
   .loginform button:hover {
@@ -71,9 +68,8 @@ html, body {
   }
   
   .Signup {
-    padding: 3.5rem;
+    padding: 5.5rem;
     text-align: center;
-    flex: 1; 
     margin: 0.5rem; 
   }
   
@@ -91,4 +87,5 @@ html, body {
       justify-content: center;
     }
   }
+  
   
